@@ -1,0 +1,12 @@
+cuda: True
+ngpu: 1
+gpu_id: '0'
+model: 'MyVAMetric'
+init_model: './checkpoints/MyVAMetric_state_epoch300.pth'
+data_dir: './train'     # Your dataset path
+video_flist: './filelists/Video_Name_List.txt'
+audio_flist: './filelists/Audio_Name_List.txt'
+workers: 4
+batchSize: 40   # batchSize should be set as the divisor of the sample number (which is 30 in our case), such as 1, 2, 3, 5, 6, 10, 15, 30.
+checkpoint_folder: './checkpoints'
+topk: 5
